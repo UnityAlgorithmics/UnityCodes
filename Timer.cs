@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 { 
@@ -9,6 +11,9 @@ public class Timer : MonoBehaviour
     // Los segundos son "float" ya que haremos que dependa de Time.deltaTime ~ 0.01 segundos
     private int minutes;
     private float seconds;
+    public TextMeshProUGUI minutesText;
+    public TextMeshProUGUI secondsText;
+    private int secondsAprox;
 
     private void Start()
     {
@@ -47,8 +52,13 @@ public class Timer : MonoBehaviour
     {
         // Actualizar el valor del tiempo cada frame
         UpdateTime();
+        minutesText.text = minutes.ToString();
+        
+
 
         // Printeamos por la consola el tiempo restante
         print(seconds);
+        secondsAprox = Mathf.RoundToInt(seconds);
+        secondsText.text = secondsAprox.ToString();
     }
 }
