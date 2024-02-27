@@ -16,11 +16,11 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            Player player = other.GetComponent<Player>();
+            Health health = other.GetComponent<Health>();
 
-            player.TakeDamage(playerDamage);
+            health.TakeDamage(playerDamage);
         }
         
         
