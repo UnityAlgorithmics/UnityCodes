@@ -13,7 +13,7 @@ public class Misile : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
         }

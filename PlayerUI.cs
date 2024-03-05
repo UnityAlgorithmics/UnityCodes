@@ -8,7 +8,9 @@ public class PlayerUI : MonoBehaviour
 {
     public CoinsCounter coinscounter;
     public Health healths;
+    public Temperature temperature;
     public TextMeshProUGUI coinscounterUI;
+    public TextMeshProUGUI temperatureUI;
     public Slider healthbar;
     
     // Start is called before the first frame update
@@ -24,5 +26,6 @@ public class PlayerUI : MonoBehaviour
         healthbar.value = healths.health;
 
         coinscounterUI.text = coinscounter.coins.ToString();
+        temperatureUI.text = temperature.tcurrentAprox.ToString();
     }
 }

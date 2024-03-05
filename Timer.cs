@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         // Inicializar los valores del tiempo, si es necesario
-        minutes = 1; // Ejemplo: 1 minutos
+        minutes = 2; // Ejemplo: 1 minutos
         seconds = 0.0f;
     }
 
@@ -57,7 +57,6 @@ public class Timer : MonoBehaviour
 
 
         // Printeamos por la consola el tiempo restante
-        print(seconds);
         secondsAprox = Mathf.RoundToInt(seconds);
         secondsText.text = secondsAprox.ToString();
     }
